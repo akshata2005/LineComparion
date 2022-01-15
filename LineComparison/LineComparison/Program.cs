@@ -8,7 +8,7 @@ namespace LineComparison
 {
     public class Program
     {
-      static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Enter x1 Value:- ");
             int x1 = Convert.ToInt32(Console.ReadLine());
@@ -34,6 +34,7 @@ namespace LineComparison
             Console.WriteLine("Length of (x, y) co-ordinates -  " + LengthofLine1);
             Console.WriteLine("Length of (j, k) co-ordinates -  " + LengthofLine2);
 
+
             if (LengthofLine1.Equals(LengthofLine2))
             {
                 Console.WriteLine("Two lines are equal ");
@@ -41,6 +42,21 @@ namespace LineComparison
             else
             {
                 Console.WriteLine("Two lines are Not equal");
+            }
+
+            double Result = LengthofLine1.CompareTo(LengthofLine2);
+            Console.WriteLine(Result);
+            if (Result == 0)
+            {
+                Console.WriteLine("Two Lines are equal ");
+            }
+            else if (Result < 0.0)
+            {
+                Console.WriteLine("Line one is Smaller thean line Two");
+            }
+            else
+            {
+                Console.WriteLine("Lines one is Greater then Line two");
             }
         }
     }
